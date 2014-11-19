@@ -15,19 +15,23 @@ public class IOPractice {
 
     /**
      * @param args the command line arguments
+     * @throws java.io.IOException
      */
     public static void main(String[] args) throws IOException{
         boolean append = true;
         //File data = new File(File.separatorChar + "temp" + File.separatorChar 
          //               + "lab1.txt");
-        File data = new File("C:\\temp\\lab1.txt");
+        //File location from laptop
+        //File data = new File("C:\\temp\\lab1.txt");
+        
+        //File location from external drive
+        File data = new File("E:\\School\\Fall 2014\\Advanced Java\\lab1.txt");
+        
         System.out.println("Absolute Path: " + data.getAbsolutePath());
         System.out.println("");
         BufferedReader in = null;
         
-        PrintWriter out = new PrintWriter(
-						new BufferedWriter(
-						new FileWriter(data, append)));
+        PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(data, append)));
         out.println("");
         out.println("Bill Clinton");
         out.println("123 White House Ln.");
